@@ -1,5 +1,6 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request, Response
 from datetime import datetime
+import json
 
 app = Flask(__name__)
 
@@ -25,7 +26,7 @@ data_access_layer = DataAccess()
 def get_entities():
     since = request.args.get('since')
     entities = data_access_layer.get_entities(since)
-    return jsonify(result=entities)
+    return Response(json.dumps(entities), mimetype='application/json')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
