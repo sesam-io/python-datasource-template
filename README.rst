@@ -2,7 +2,7 @@
 python-datasource-template
 ==========================
 
-A python micro service template for feeding a JSON entity stream to a Sesam service instance.
+A Python micro service template for feeding a JSON entity stream to a Sesam service instance.
 
 ::
 
@@ -15,73 +15,73 @@ A python micro service template for feeding a JSON entity stream to a Sesam serv
 The service listens on port 5000. JSON entities can be retrieved from 'http://localhost:5000/entities'.
 
 ::
-   
+
   $ curl -s 'http://localhost:5000/entities' | python3 -m json.tool
   [
       {
-          "_updated": "2016-06-03T14:13:23.296816",
+          "name": "entity 0",
           "_id": "entity-0",
-          "name": "entity 0"
+          "_updated": "2016-06-26T10:46:13.351467Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296827",
+          "name": "entity 1",
           "_id": "entity-1",
-          "name": "entity 1"
+          "_updated": "2016-06-26T10:46:13.351468Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296830",
+          "name": "entity 2",
           "_id": "entity-2",
-          "name": "entity 2"
+          "_updated": "2016-06-26T10:46:13.351469Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296833",
+          "name": "entity 3",
           "_id": "entity-3",
-          "name": "entity 3"
+          "_updated": "2016-06-26T10:46:13.351470Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296836",
+          "name": "entity 4",
           "_id": "entity-4",
-          "name": "entity 4"
+          "_updated": "2016-06-26T10:46:13.351471Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296839",
+          "name": "entity 5",
           "_id": "entity-5",
-          "name": "entity 5"
+          "_updated": "2016-06-26T10:46:13.351472Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296842",
+          "name": "entity 6",
           "_id": "entity-6",
-          "name": "entity 6"
+          "_updated": "2016-06-26T10:46:13.351473Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296845",
+          "name": "entity 7",
           "_id": "entity-7",
-          "name": "entity 7"
+          "_updated": "2016-06-26T10:46:13.351474Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296848",
+          "name": "entity 8",
           "_id": "entity-8",
-          "name": "entity 8"
+          "_updated": "2016-06-26T10:46:13.351475Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296851",
+          "name": "entity 9",
           "_id": "entity-9",
-          "name": "entity 9"
+          "_updated": "2016-06-26T10:46:13.351476Z"
       }
   ]
 
 ::
 
-  $ curl -s 'http://localhost:5000/entities?since=2016-06-03T14:13:23.296848' | python3 -m json.tool
+   curl -s 'http://localhost:5000/entities?since=2016-06-26T10:46:13.351474Z' | python3 -m json.tool
   [
       {
-          "_updated": "2016-06-03T14:13:23.296848",
+          "name": "entity 8",
           "_id": "entity-8",
-          "name": "entity 8"
+          "_updated": "2016-06-26T10:46:13.351475Z"
       },
       {
-          "_updated": "2016-06-03T14:13:23.296851",
+          "name": "entity 9",
           "_id": "entity-9",
-          "name": "entity 9"
+          "_updated": "2016-06-26T10:46:13.351476Z"
       }
   ]
