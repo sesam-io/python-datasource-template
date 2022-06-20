@@ -2,7 +2,7 @@
 python-datasource-template
 ==========================
 
-A Python micro service template for feeding a JSON entity stream to a Sesam service instance.
+A Python microservice template for feeding a JSON entity stream to a Sesam service instance.
 
 ::
 
@@ -12,7 +12,7 @@ A Python micro service template for feeding a JSON entity stream to a Sesam serv
   [14/Mar/2019:10:32:40] ENGINE Serving on http://0.0.0.0:5000
   [14/Mar/2019:10:32:40] ENGINE Bus STARTED
 
-The service listens on port 5000. JSON entities can be retrieved from 'http://localhost:5000/entities'.
+The service listens on port 5000 by default, but you can override the port by passing in the PORT environment variable. JSON entities can be retrieved from 'http://localhost:5000/entities'.
 
 ::
 
