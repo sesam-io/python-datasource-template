@@ -3,6 +3,7 @@ import cherrypy
 from datetime import datetime, timedelta
 import json
 import logging
+import os
 import paste.translogger
 
 
@@ -62,12 +63,14 @@ if __name__ == '__main__':
 
     cherrypy.tree.graft(app, '/')
 
+    port = int(os.environ.get("PORT", "5000"))
+
     # Set the configuration of the web server to production mode
     cherrypy.config.update({
         'environment': 'production',
         'engine.autoreload_on': False,
         'log.screen': True,
-        'server.socket_port': 5000,
+        'server.socket_port': port,
         'server.socket_host': '0.0.0.0'
     })
 
